@@ -41,18 +41,18 @@ public class PostController {
     }
 
     @PutMapping("/{id}")
-public ResponseEntity<Post> updatePost(
+    public ResponseEntity<Post> updatePost(
         @PathVariable UUID id,
         @RequestParam String content) {
 
-    return ResponseEntity.ok(postService.updatePost(id, content));
-}
+        return ResponseEntity.ok(postService.updatePost(id, content));
+   }
 
-@DeleteMapping("/{id}")
-public ResponseEntity<String> deletePost(@PathVariable UUID id) {
+    @DeleteMapping("/{id}")
+     public ResponseEntity<String> deletePost(@PathVariable UUID id) {
 
-    postService.deletePost(id);
+        postService.deletePost(id);
 
-    return ResponseEntity.ok("Post deleted successfully");
-}
+        return ResponseEntity.ok("Post deleted successfully");
+    }
 }
