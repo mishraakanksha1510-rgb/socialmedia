@@ -1,6 +1,7 @@
 package com.example.socialmedia.entity;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "users")
@@ -15,7 +16,9 @@ public class User {
     private Integer age;
     private String email;
     private String phone;
+    @JsonIgnore
     private String password;
+    
 
     public User() {
     }
